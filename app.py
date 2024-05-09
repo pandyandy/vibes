@@ -9,7 +9,7 @@ from datetime import datetime, timedelta
 from streamlit_extras.let_it_rain import rain
 from streamlit_extras.stylable_container import stylable_container
 
-st.set_page_config(layout = 'wide')
+st.set_page_config(layout = 'centered')
 
 path = os.path.dirname(os.path.abspath(__file__))
 
@@ -63,7 +63,7 @@ with tab1:
     st.caption(caption)
     st.markdown("###")
 
-    _, col1, col2, col3, _ = st.columns(5)
+    col1, col2, col3 = st.columns(3)
     with col1:
         with st.container():
             good = f"{good_df.shape[0]}/50"
